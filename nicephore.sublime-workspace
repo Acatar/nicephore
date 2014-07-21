@@ -1,0 +1,566 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"reverse",
+				"reverseMap"
+			],
+			[
+				"map",
+				"mappedCallback"
+			],
+			[
+				"bind",
+				"bindModelToView"
+			],
+			[
+				"make",
+				"makePromise"
+			],
+			[
+				"argume",
+				"argumentException"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"_mo",
+				"_mockAjax"
+			],
+			[
+				"_re",
+				"_realDefer"
+			],
+			[
+				"te",
+				"text"
+			],
+			[
+				"regist",
+				"registerEvent"
+			],
+			[
+				"aft",
+				"afterNewChild"
+			],
+			[
+				"fac",
+				"factoryTest"
+			],
+			[
+				"reg",
+				"register"
+			],
+			[
+				"afterNew",
+				"afterNewChildEvents"
+			],
+			[
+				"beforeNewC",
+				"beforeNewChildEvents"
+			],
+			[
+				"exec",
+				"executeEvent"
+			],
+			[
+				"modu",
+				"moduleName"
+			],
+			[
+				"afterRes",
+				"afterResolveEvents"
+			],
+			[
+				"afterRe",
+				"afterResolve"
+			],
+			[
+				"beforeRes",
+				"beforeResolve"
+			],
+			[
+				"bef",
+				"beforeNewChild"
+			],
+			[
+				"afterR",
+				"afterResolveEvents"
+			],
+			[
+				"beforeRe",
+				"beforeResolveEvents"
+			],
+			[
+				"beforeReso",
+				"beforeResolveOneEvents"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"afterReg",
+				"afterRegister"
+			],
+			[
+				"afterRegis",
+				"afterRegisterEvents"
+			],
+			[
+				"befo",
+				"beforeRegisterEvents"
+			],
+			[
+				"beforeReg",
+				"beforeRegisterEvents"
+			],
+			[
+				"def",
+				"defaultNotResolvableHandler"
+			],
+			[
+				"befor",
+				"beforeNewChild"
+			],
+			[
+				"paren",
+				"parentContainerRegistration"
+			],
+			[
+				"con",
+				"containerRegistration"
+			],
+			[
+				"c",
+				"container"
+			],
+			[
+				"after",
+				"afterRegister"
+			],
+			[
+				"foo",
+				"fooB4Resolve"
+			],
+			[
+				"beforeR",
+				"beforeResolve"
+			],
+			[
+				"Cre",
+				"createChildContainer"
+			],
+			[
+				"crea",
+				"createChildContainer"
+			],
+			[
+				"re",
+				"resolve"
+			],
+			[
+				"parent",
+				"parentContainer"
+			],
+			[
+				"pare",
+				"parentContainer"
+			],
+			[
+				"regis",
+				"registered"
+			],
+			[
+				"eleme",
+				"elementVm"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "source/keyObserver.js",
+			"settings":
+			{
+				"buffer_size": 253,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/maps.js",
+			"settings":
+			{
+				"buffer_size": 4294,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/observer.js",
+			"settings":
+			{
+				"buffer_size": 4691,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/utils.js",
+			"settings":
+			{
+				"buffer_size": 9986,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/andes/Documents/dev_git/mousetrap/mousetrap.js",
+		"/Users/andes/Documents/dev_git/gutentyp/source/keyboard/maps.js",
+		"/Users/andes/Documents/dev_git/gutentyp/source/keyboard/observer.js",
+		"/Users/andes/Documents/dev_git/gutentyp/source/keyboard/utils.js",
+		"/Users/andes/Documents/dev_git/gutentyp/source/keyboard/keyObserver.js",
+		"/Users/andes/Documents/dev_git/gutentyp/source/gutentyp.js",
+		"/Users/andes/Google Drive/CMU/e-commerce tech/DI Video playbook",
+		"/Users/andes/Documents/dev_git/grain.js/source/grain.tabEvents.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/index.html",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStarted/index.html",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStarted/scripts/view.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStarted/scripts/viewModel.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStarted/scripts/mock-ajax.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStarted/scripts/controller.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStarted/scripts/compositionRoot.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/patternInAMDWithoutHilary/index.html",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStarted/scripts/model.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStartedWithRequire/index.html",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStartedWithRequire/scripts/compositionRoot.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStartedWithRequire/README.md",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStarted/README.md",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStartedWithRequire/scripts/model.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStartedWithRequire/scripts/controller.js",
+		"/Users/andes/Documents/dev_git/hilaryjs/src/hilary.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStartedWithRequire/scripts/mock-ajax.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStartedWithRequire/scripts/view.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStartedWithRequire/scripts/requireShim.js",
+		"/Users/andes/Documents/dev_git/hilaryjs/test/spec/hilarySpec.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStarted/scripts/hilary.js",
+		"/Users/andes/Documents/dev_git/acatar.github.io/stylesheets/stylesheet.css",
+		"/Users/andes/Documents/dev_git/acatar.github.io/hilary/gettingStarted/withRequireJs.html",
+		"/Users/andes/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/andes/Documents/dev_git/hilaryjs/test/spec/SpecHelper.js",
+		"/Users/andes/Documents/dev_git/hilaryjs/README.md",
+		"/Users/andes/Documents/dev_git/hilaryjs/test/SpecRunner.html",
+		"/Users/andes/Documents/dev_git/hilaryjs/test/spec/PlayerSpec.js",
+		"/Users/andes/Documents/dev/pnotify-tests.js",
+		"/Users/andes/Downloads/AddingBeforeAndAfterToTheSammyPipeline.js",
+		"/Users/andes/Documents/dev/weemo-tests.js",
+		"/Users/andes/Documents/dev_git/weemo/Weemo.js_beta/examples/Call1to1WDonly/caller.html",
+		"/Users/andes/Documents/dev_git/weemo/Weemo.js_beta/examples/Call1to1WDonly/callee.html",
+		"/Users/andes/Documents/dev_git/weemo/Weemo.js_beta/examples/Call1to1WDandWebRTC/callee.html",
+		"/Users/andes/Documents/dev_git/weemo/Weemo.js_beta/examples/Call1to1WDandWebRTC/caller.html",
+		"/Users/andes/Documents/dev/promise-example.js",
+		"/Users/andes/Documents/dev_git/Weemo.js_beta/examples/Call 1to1 WD and WebRTC/caller.html",
+		"/Users/andes/Documents/dev_git/Weemo.js_beta/examples/Call 1to1 WD and WebRTC/callee.html",
+		"/Users/andes/Documents/dev_git/Weemo.js_beta/examples/Call 1to1 WD only/callee.html",
+		"/Users/andes/Documents/dev_git/Weemo.js_beta/examples/Call 1to1 WD only/caller.html",
+		"/Users/andes/Documents/dev_git/Weemo.js_beta/examples/Conference Call WD only/external_AUTH.html",
+		"/Users/andes/Documents/dev_git/Weemo.js_beta/examples/Conference Call WD only/host.html",
+		"/Users/andes/Documents/dev_git/Weemo.js_beta/examples/Conference Call WD only/attendee1.html",
+		"/Users/andes/Documents/dev_git/Weemo.js_beta/examples/Conference Call WD only/host_AUTH.html",
+		"/Users/andes/Documents/dev_git/Weemo.js_beta/GoogleHangouts/simpleHangoutApp.xml"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"observeDomEvent",
+			"_ignoreNextKeyup",
+			"characterFromEvent",
+			"_characterFromEvent",
+			"_handleKeyEvent",
+			"class",
+			"' mousetrap",
+			"'mousetrap'",
+			"_addEvent",
+			"action",
+			"_callbacks",
+			"getReverse",
+			"reverseMap",
+			"isModifier",
+			"_getKeyInfo",
+			"sequenceLevels",
+			"_directMap",
+			"_bindMultiple",
+			"bind",
+			"jquery",
+			"example",
+			"code",
+			"notResolvableHandler",
+			"createChildContainer",
+			"registerMany",
+			"p>",
+			"prizeEvents",
+			"wheelMarker",
+			">\n",
+			"783e450fc094",
+			"YOUR_APP_IDENTIFIER"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"783e450fc094"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "source/keyObserver.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								253,
+								253
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "source/maps.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4294,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "source/observer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4691,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "source/utils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9986,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "nicephore.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
