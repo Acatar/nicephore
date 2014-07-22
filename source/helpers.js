@@ -7,6 +7,8 @@ hilary.register('nicephore::observer::helpers', { init: function (maps, utils, m
     
     var makeCallbackKey,
         registerCallback,
+        executePasteCallback,
+        executeOnePasteCallback,
         executeCallback,
         executeOneCallback,
         modifiersAreSame,
@@ -36,7 +38,29 @@ hilary.register('nicephore::observer::helpers', { init: function (maps, utils, m
         else {
             mappedCallback.push(callback);
         }       
-    };           
+    };
+    
+    executePasteCallback = function (keyInfo, event, items) {
+        var i,
+            callbacks;
+        
+        callbacks = maps.callbackMap[makeCallbackKey(keyInfo)];
+        
+        if(!callbacks)
+            return;
+
+        for (i in callbacks) {
+            executeOnePasteCallback(keyInfo, event, callbacks[i], items);           
+        }        
+    };
+    
+    executeOnePasteCallback = function (eventKeyInfo, event, callback, items) {
+        if(utils.isFunction(callback.func) 
+            && callback.func(event, eventKeyInfo, items) === false) {
+                utils.preventDefault(event);
+                utils.stopPropagation(event);   
+        }
+    };    
     
     executeCallback = function (keyInfo, event) {
         var i,
@@ -264,6 +288,7 @@ hilary.register('nicephore::observer::helpers', { init: function (maps, utils, m
     return {
         
         registerCallback : registerCallback,
+        executePasteCallback: executePasteCallback,
 
         /**
         * actually calls the callback function

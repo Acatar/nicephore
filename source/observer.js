@@ -2,26 +2,30 @@
 /**
 * The observer will become the public nicephore when initialized
 */
-hilary.register('nicephore::observer', { init: function (maps, utils, models, helpers, console) {
+hilary.register('nicephore::observer', { init: function (maps, utils, models, helpers, console, JSON) {
     "use strict";
 
     var observe,
         observeOne,
         observePaste,
+        observeDomEvent,
+        observeKeyEvents,
         stopObserving,
         isStarted = false,
-        keyEventHandler,
-        keyEventHandlerCallback,
-        makeCallbackKey,
-        registerCallback,
-        sequenceLevels,
-        className = 'keypress-observed';
+        keyEventHandler;
 
     observe = function (keys, eventType, matchAnyModifier, callback) {
         var key;
         
         for (key in keys) {
-            observeOne(keys[key], eventType, matchAnyModifier, callback);
+            var currentKey = keys[key];
+            
+            if (currentKey === 'paste') {
+                observePaste(callback);
+            }
+            else {
+                observeOne(currentKey, eventType, matchAnyModifier, callback);
+            }
         }
     };
 
@@ -35,19 +39,43 @@ hilary.register('nicephore::observer', { init: function (maps, utils, models, he
         helpers.registerCallback(keyInfo, callbackObj);
     };
 
-    observePaste = function () {
-    	// TODO 
-
-		// window.addEventListener('paste', ... or
-        document.onpaste = function (event) {
-            var items = (event.clipboardData || event.originalEvent.clipboardData).items;
-            console.log(JSON.stringify(items)); // will give you the mime types
-            var blob = items[0].getAsFile();
-            var reader = new FileReader();
-            reader.onload = function(event){
-            console.log(event.target.result)}; // data url!
-            reader.readAsDataURL(blob);
-        };
+    observePaste = function (callback) {
+        var keyInfo = helpers.getKeyInfo('paste', 'void'),
+            callbackObj;
+        
+        callbackObj = models.callback({ key: 'paste', keyInfo: keyInfo, callback: callback, eventType: 'void' });
+        helpers.registerCallback(keyInfo, callbackObj);
+        
+        if (document.onpaste !== undefined) {
+            document.onpaste = function (event) {
+                var i,
+                    items,
+                    output = {
+                        items: [],
+                        json: ''
+                    };
+                
+                items = (event.clipboardData || event.originalEvent.clipboardData).items;
+                output.json = JSON.stringify(items); // will give you the mime types
+                
+                for (i in items) {
+                    var item = items[i],
+                        pasteObj = new models.pasteObject({
+                            kind: item.kind,
+                            type: item.type
+                        });
+                    
+                    if (item.kind === 'file' && item.getAsFile) {
+                        pasteObj.file = item.getAsFile();
+                        pasteObj.readToDataUrl();
+                    }
+                    
+                    output.items.push(pasteObj);
+                }
+                
+                helpers.executePasteCallback(keyInfo, event, output);
+            };
+        }
     };
 
     stopObserving = function (keys, eventType) {
@@ -61,36 +89,49 @@ hilary.register('nicephore::observer', { init: function (maps, utils, models, he
      * @returns void
      */
     keyEventHandler = function (event) {
-        var info;
-
-        // normalize e.which for key events
-        // @see http://stackoverflow.com/questions/4285627/javascript-keycode-vs-charcode-utter-confusion
-        if (typeof event.which !== 'number') {
-            event.which = event.keyCode;
-        }
-
-        info = helpers.getKeyInfoFromEvent(event);
+        var info = helpers.getKeyInfoFromEvent(event);
 
         // no character found then stop
-        if (!info.key) {
+        if (!info.key)
             return;
-        }
 
         helpers.executeCallback(info, event);
     };
+    
+    observeDomEvent = function (domObject, eventType) {
+        utils.observeDomEvent(domObject, eventType, keyEventHandler);
+
+        return this;
+    };
+
+    observeKeyEvents = function (domObject) {
+        observeDomEvent(domObject, 'keypress');
+        observeDomEvent(domObject, 'keydown');
+        observeDomEvent(domObject, 'keyup');
+
+        return this;
+    };   
 
     return {
     	start: function () {
         	if(isStarted)
                 return this;
             
-            utils.observeDomEvent(document, 'keypress', keyEventHandler);
-        	utils.observeDomEvent(document, 'keydown', keyEventHandler);
-        	utils.observeDomEvent(document, 'keyup', keyEventHandler);
+            observeKeyEvents(document);
             isStarted = true;
             
             return this;
     	},
+        
+        /**
+        * observe DOM events of a give type (i.e. keydown) for a given DOM object (i.e. document, body, $('#mydiv')[0])
+        */
+        observeDomEvent: observeDomEvent,
+        
+        /**
+        * observe all key events (i.e. keydown, keyup and keypress) for a given DOM object (i.e. document, body, $('#mydiv')[0])
+        */
+        observeKeyEvents: observeKeyEvents,        
 
     	/**
          * makes and event observable
