@@ -1,4 +1,5 @@
 /*jslint plusplus: true */
+/*global hilary*/
 /**
 * The observer will become the public nicephore when initialized
 */
@@ -22,8 +23,7 @@ hilary.register('nicephore::observer', { init: function (maps, utils, models, he
             
             if (currentKey === 'paste') {
                 observePaste(callback);
-            }
-            else {
+            } else {
                 observeOne(currentKey, eventType, matchAnyModifier, callback);
             }
         }
@@ -79,7 +79,7 @@ hilary.register('nicephore::observer', { init: function (maps, utils, models, he
     };
 
     stopObserving = function (keys, eventType) {
-    	throw Error('stopObserving is not implemented');
+        throw new Error('stopObserving is not implemented');
     };
 
     /**
@@ -92,8 +92,9 @@ hilary.register('nicephore::observer', { init: function (maps, utils, models, he
         var info = helpers.getKeyInfoFromEvent(event);
 
         // no character found then stop
-        if (!info.key)
+        if (!info.key) {
             return;
+        }
 
         helpers.executeCallback(info, event);
     };
@@ -110,18 +111,19 @@ hilary.register('nicephore::observer', { init: function (maps, utils, models, he
         observeDomEvent(domObject, 'keyup');
 
         return this;
-    };   
+    };
 
     return {
-    	start: function () {
-        	if(isStarted)
+        start: function () {
+            if (isStarted) {
                 return this;
+            }
             
             observeKeyEvents(document);
             isStarted = true;
             
             return this;
-    	},
+        },
         
         /**
         * observe DOM events of a give type (i.e. keydown) for a given DOM object (i.e. document, body, $('#mydiv')[0])
@@ -131,9 +133,9 @@ hilary.register('nicephore::observer', { init: function (maps, utils, models, he
         /**
         * observe all key events (i.e. keydown, keyup and keypress) for a given DOM object (i.e. document, body, $('#mydiv')[0])
         */
-        observeKeyEvents: observeKeyEvents,        
+        observeKeyEvents: observeKeyEvents,
 
-    	/**
+        /**
          * makes and event observable
          *
          * can be a single key, a combination of keys separated with +,
@@ -143,17 +145,19 @@ hilary.register('nicephore::observer', { init: function (maps, utils, models, he
          * correct key ends up getting bound (the last key in the pattern)
          *
          * @param {string|Array} keys
-         * @param {Function} callback
          * @param {string=} eventType - 'keypress', 'keydown', or 'keyup'
+         * @param {bool|Function} matchAnyModifier: when true, the modifier keys (i.e. control, command) will
+         *      match using OR logic, otherwise the keys will match using AND logic. When this is a function, 
+         *      it is treated as the callback, and the fourth parameter is ignored
+         * @param {Function} callback the function to be executed when the key event is observed
          * @returns this observer
          */
         observe: function (keys, eventType, matchAnyModifier, callback) {
             keys = utils.isArray(keys) ? keys : [keys];
             
-            if(utils.isFunction(matchAnyModifier)) {
+            if (utils.isFunction(matchAnyModifier)) {
                 observe(keys, eventType, false, matchAnyModifier /*as callback*/);
-            }
-            else {
+            } else {
                 observe(keys, eventType, matchAnyModifier, callback);
             }
             

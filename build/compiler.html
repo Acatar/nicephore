@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title>Nicephore optimizer</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <h2>Whitespace Only Optimization</h2>
+    <form id="whitespace">
+        <input name="output_format" value="json" />
+        <!--<input name="output_info" value="compiled_code" />-->
+        <input name="output_info" value="warnings" />
+        <input name="output_info" value="errors" />
+        <input name="output_info" value="statistics" />
+        <input name="compilation_level" value="WHITESPACE_ONLY" />
+        <input name="warning_level" value="default" />
+        <input name="formatting" value="pretty_print" />
+        <input name="formatting" value="print_input_delimiter" />
+        <input name="output_file_name" value="nicephore.js" />
+        <input name="code_url" value="https://raw.githubusercontent.com/Acatar/nicephore/master/source/maps.js" />
+        <input name="code_url" value="https://raw.githubusercontent.com/Acatar/nicephore/master/source/utils.js" />
+        <input name="code_url" value="https://raw.githubusercontent.com/Acatar/nicephore/master/source/helpers.js" />
+        <input name="code_url" value="https://raw.githubusercontent.com/Acatar/nicephore/master/source/models.js" />
+        <input name="code_url" value="https://raw.githubusercontent.com/Acatar/nicephore/master/source/observer.js" />
+        <input name="code_url" value="https://raw.githubusercontent.com/Acatar/nicephore/master/source/nicephore.js" />
+    </form>
+    <button type="button" onclick="optimize.whitespace();">optimize</button>    
+    
+    <h2>Simple Optimization (Minify)</h2>
+    <form id="simple">
+        <input name="output_format" value="json" />
+        <!--<input name="output_info" value="compiled_code" />-->
+        <input name="output_info" value="warnings" />
+        <input name="output_info" value="errors" />
+        <input name="output_info" value="statistics" />
+        <input name="compilation_level" value="SIMPLE_OPTIMIZATIONS" />
+        <input name="warning_level" value="default" />
+        <input name="output_file_name" value="nicephore.min.js" />
+        <input name="code_url" value="https://raw.githubusercontent.com/Acatar/nicephore/master/source/maps.js" />
+        <input name="code_url" value="https://raw.githubusercontent.com/Acatar/nicephore/master/source/utils.js" />
+        <input name="code_url" value="https://raw.githubusercontent.com/Acatar/nicephore/master/source/helpers.js" />
+        <input name="code_url" value="https://raw.githubusercontent.com/Acatar/nicephore/master/source/models.js" />
+        <input name="code_url" value="https://raw.githubusercontent.com/Acatar/nicephore/master/source/observer.js" />
+        <input name="code_url" value="https://raw.githubusercontent.com/Acatar/nicephore/master/source/nicephore.js" />
+    </form>
+    <button type="button" onclick="optimize.simple();">optimize</button>
+    
+    <br /><br />
+    <div id="compiledoutput"></div>
+    <div id="compiledlink"></div>
+    
+    <script>
+        
+        (function ($) {
+            var optimize = {},
+                doit,
+                rootUrl = 'https://closure-compiler.appspot.com';
+            
+            doit = function(selector) {
+                var linkName = $(selector + ' [name="output_file_name"').val();
+                
+                $.ajax({
+                    url: rootUrl + '/compile',
+                    method: 'POST',
+                    contentType: 'application/x-www-form-urlencoded;charset=UTF-8',
+                    dataType: 'json',
+                    data: $(selector).serialize()
+                }).done(function (output) {
+                    $('#compiledlink').html('Success! Get the optimized code here: <a href="' + rootUrl + output.outputFilePath + '" target="_blank">' + linkName + '</a>');
+                    //$('#compiledoutput').html(output.compiledCode);
+                })
+                .fail(function (jqXHR, textStatus, errorThrown) {
+                    console.log('fail', errorThrown);
+                    console.log(jqXHR);
+                    
+                    $('#compiledoutput').html('The optimization failed :( ' + errorThrown);
+                });            
+            };
+            
+            optimize.simple = function() {
+                doit('#simple');
+            };
+            
+            optimize.whitespace = function () {
+                doit('#whitespace');
+            };
+            
+            
+            window.optimize = optimize;
+        })(jQuery);
+    
+    </script>       
+    
+</body>
+</html>
