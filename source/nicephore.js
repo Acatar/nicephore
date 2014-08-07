@@ -12,4 +12,6 @@ hilary.use([window, window.FileReader, window.console, window.JSON], function(ct
     };
 
     window.nicephore = makeNicophore;
+    
+    return window.nicephore;
 });

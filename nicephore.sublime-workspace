@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"mod",
+				"modifiers"
+			],
+			[
+				"call",
+				"callbackKeyInfo"
+			],
+			[
+				"event",
+				"eventKeyInfo"
+			],
+			[
+				"key",
+				"keyInfo"
+			],
+			[
+				"keyIn",
+				"keyInfoProto"
+			],
+			[
 				"reverse",
 				"reverseMap"
 			],
@@ -100,10 +120,6 @@
 				"beforeResolveOneEvents"
 			],
 			[
-				"call",
-				"callback"
-			],
-			[
 				"afterReg",
 				"afterRegister"
 			],
@@ -184,10 +200,10 @@
 	"buffers":
 	[
 		{
-			"file": "source/keyObserver.js",
+			"file": "source/nicephore.js",
 			"settings":
 			{
-				"buffer_size": 253,
+				"buffer_size": 711,
 				"line_ending": "Unix"
 			}
 		},
@@ -195,15 +211,15 @@
 			"file": "source/maps.js",
 			"settings":
 			{
-				"buffer_size": 4294,
+				"buffer_size": 4343,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "source/observer.js",
+			"file": "source/models.js",
 			"settings":
 			{
-				"buffer_size": 4691,
+				"buffer_size": 2183,
 				"line_ending": "Unix"
 			}
 		},
@@ -211,7 +227,47 @@
 			"file": "source/utils.js",
 			"settings":
 			{
-				"buffer_size": 9986,
+				"buffer_size": 2557,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/helpers.js",
+			"settings":
+			{
+				"buffer_size": 9592,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/observer.js",
+			"settings":
+			{
+				"buffer_size": 5905,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tests/SpecRunner.html",
+			"settings":
+			{
+				"buffer_size": 1421,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/andes/Documents/dev_git/acatar/Spa/Scripts/acatar/utils.js",
+			"settings":
+			{
+				"buffer_size": 6612,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/andes/Documents/dev_git/gutentyp/source/toolbar.js",
+			"settings":
+			{
+				"buffer_size": 6152,
 				"line_ending": "Unix"
 			}
 		}
@@ -243,6 +299,8 @@
 	},
 	"file_history":
 	[
+		"/Users/andes/Documents/dev_git/nicephore/source/keyObserver.js",
+		"/Users/andes/Documents/dev_git/nicephore/nicephore.sublime-project",
 		"/Users/andes/Documents/dev_git/mousetrap/mousetrap.js",
 		"/Users/andes/Documents/dev_git/gutentyp/source/keyboard/maps.js",
 		"/Users/andes/Documents/dev_git/gutentyp/source/keyboard/observer.js",
@@ -299,7 +357,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -313,6 +371,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"makeCallbackKey",
+			"getEventModifiers",
+			"helpers",
+			"utils",
+			"e.",
+			"e.event",
+			"e.",
 			"observeDomEvent",
 			"_ignoreNextKeyup",
 			"characterFromEvent",
@@ -362,24 +427,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "source/keyObserver.js",
+					"file": "source/nicephore.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 253,
+						"buffer_size": 711,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								253,
-								253
+								470,
+								470
 							]
 						],
 						"settings":
@@ -390,7 +455,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -399,14 +464,14 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4294,
+						"buffer_size": 4343,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
+								157,
 								0
 							]
 						],
@@ -420,30 +485,150 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "source/observer.js",
+					"file": "source/models.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4691,
+						"buffer_size": 2183,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								668,
+								668
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 333.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "source/utils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2557,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								150,
+								150
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "source/helpers.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9592,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1460,
+								1460
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 340.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "source/observer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5905,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								749,
+								818
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 166.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "tests/SpecRunner.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1421,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1315,
+								1315
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
@@ -454,12 +639,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "source/utils.js",
+					"buffer": 7,
+					"file": "/Users/andes/Documents/dev_git/acatar/Spa/Scripts/acatar/utils.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9986,
+						"buffer_size": 6612,
 						"regions":
 						{
 						},
@@ -472,15 +657,41 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/andes/Documents/dev_git/gutentyp/source/toolbar.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3038,
+								3038
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2760.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -555,7 +766,7 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 150.0,

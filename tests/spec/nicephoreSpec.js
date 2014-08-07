@@ -43,7 +43,7 @@ hilary.use([window, describe, console], function(ctx, window, console) {
                 text += possible.charAt(Math.floor(Math.random() * possible.length));
 
             return text;
-        }
+        };
         
         beforeEach(function() {
             // clear the callbackMap
